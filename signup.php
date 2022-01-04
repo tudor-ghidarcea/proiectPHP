@@ -23,11 +23,28 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 
 	}
 }
+
+if (isset($_POST['submit'])) {
+  $secret = "6LcQPO8dAAAAALOlgWhsFKzTp0hImY35dEAzET3F";
+  $response = $_POST['g-recaptcha-response'];
+  $remoteip = $_SERVER['REMOTE_ADDR'];
+  $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip";
+ $data = file_get_contents($url);
+  $row = json_decode($data, true);
+
+
+if ($row['success'] == "true") {
+    echo "<script>alert('Validare recaptcha reusita');</script>";
+  } else {
+    echo "<script>alert('Validare recaptcha esuata');</script>";
+  }
+}
 ?>
 
 <!DOCTYPE html>
 <head>
 	<title>Signup</title>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 	<style>
@@ -72,4 +89,8 @@ body {
 			<input id="text" type = "password" name = "password">
 			<input id="button" type="submit" value="Signup">
 			<a href="login.php">Login</a>
+			<div class="g-recaptcha" data-sitekey="6LcQPO8dAAAAAH7kK3b4bKFNJnX4m1MjOGQVdZaH"></div>
 		</form>
+		</div>
+	</body>
+</html>
