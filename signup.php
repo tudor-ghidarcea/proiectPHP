@@ -23,8 +23,11 @@ if (isset($_POST['submit'])) {
 if($_SERVER['REQUEST_METHOD']=="POST")
 {
 	//ceva a fost postat
-	$user_name=$_POST['user_name'];
-	$password=$_POST['password'];
+
+
+	$user_name=mysqli_real_escape_string($con,$_POST['user_name']);
+
+	$password=mysqli_real_escape_string($con,$_POST['password']);
 	
 	if(!empty($user_name)&&!empty($password)&&!is_numeric($user_name))
 	{
