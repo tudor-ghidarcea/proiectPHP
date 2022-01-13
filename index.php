@@ -21,7 +21,7 @@ body {
   background-image: url('record.jpeg');
 </style>
 	<a href = "logout.php">Logout</a>
-	<h1><font color = "white">Acces permis. <a href = "index.html">Clic aici pentru a merge la pagina principala:</h1></font></a>
+	<h1><font color = "white">Acces permis. <a href = "home.php">Clic aici pentru a merge la pagina principala:</h1></font></a>
 	Buna ziua, <?php echo $user_data['user_name'];?>
 
 

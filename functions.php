@@ -1,4 +1,9 @@
 <?php
+
+include("connect.php");
+
+
+
 function check_login($con)
 {
 	if(isset($_SESSION['user']))
@@ -30,3 +35,7 @@ function random_num($length)
 	}
 	return $text;
 }
+
+
+
+?>

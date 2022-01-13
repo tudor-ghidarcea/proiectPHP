@@ -2,11 +2,12 @@
 
 
 $dbhost = "localhost";
-$dbuser = "id17950174_root";
-$dbpass = "I+x0b+[oo5Yh+]fD";
-$dbname = "id17950174_login";
+$dbuser = "id17950174_administrator";
+$dbpass = "YS39TsQ%e)k5F@8T";
+$dbname = "id17950174_casa_de_discuri";
 
 if(!$con = mysqli_connect($dbhost, $dbuser,$dbpass,$dbname))
 	{
 		die("failed to connect");
 	}
+	?>
