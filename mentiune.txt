@@ -1,0 +1,2 @@
+pentru export in pdf, am folosit libraria fpdf17, insa nu am putut sa o adaug in git din cauza ca folderul are prea multe fisiere, iar daca le luam pe rand cel mai probabil 
+stricam structura folderelor si nu mai mergea libraria
